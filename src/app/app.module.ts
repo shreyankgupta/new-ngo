@@ -7,6 +7,7 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
+import { MorePage } from "../pages/more/more";
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from "../pages/login/login";
 import { SignupPage } from "../pages/signup/signup";
@@ -23,6 +24,7 @@ import { LogindbProvider } from '../providers/logindb/logindb';
     AboutPage,
     ContactPage,
     HomePage,
+    MorePage,
     TabsPage,
     LoginPage,
     SignupPage
@@ -38,6 +40,7 @@ import { LogindbProvider } from '../providers/logindb/logindb';
     AboutPage,
     ContactPage,
     HomePage,
+    MorePage,
     TabsPage,
     LoginPage,
     SignupPage

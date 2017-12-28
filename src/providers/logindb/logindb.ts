@@ -11,12 +11,12 @@ import { Users } from "../../shared/users";
 @Injectable()
 export class LogindbProvider {
 
-  public url:string="http://localhost:3000/User";
+  public url:string="http://localhost:3000/login/";
   constructor(public http: HttpClient) {
     console.log('Hello LogindbProvider Provider');
   }
 
-  getUserById(item)
+  login(item)
   {
     let body=JSON.stringify(item);
   

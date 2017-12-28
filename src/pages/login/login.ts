@@ -33,13 +33,14 @@ export class LoginPage {
 
   onLogin() {
     let item = new Users(this.pk_email_id,'', '', '', this.password, '', '');
-    this.data.getUserById(item).subscribe(
+    this.data.login(item).subscribe(
       (data1:Users[]) => {
-        if (data1.length == 1) {
+        if (data1.length==1) {
           this.navCtrl.push(HomePage);
           
         }
         else {
+          
          alert("Something Wrong");
         }
 
