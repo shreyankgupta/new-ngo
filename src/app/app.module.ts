@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { IonicStorageModule } from "@ionic/Storage";
+import { IonicStorageModule } from "@ionic/storage";
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -25,6 +25,7 @@ import { TopdonorsProvider } from '../providers/topdonors/topdonors';
 
 import { DonategoodsProvider } from '../providers/donategoodsdb/donategoodsdb';
 import { DonatemoneydbProvider } from '../providers/donatemoneydb/donatemoneydb';
+import { ReqinvdbProvider } from '../providers/reqinvdb/reqinvdb';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { DonatemoneydbProvider } from '../providers/donatemoneydb/donatemoneydb'
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp),
-    IonicStorageModule
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,7 +67,8 @@ import { DonatemoneydbProvider } from '../providers/donatemoneydb/donatemoneydb'
     LogindbProvider,
     TopdonorsProvider,
     DonategoodsProvider,
-    DonatemoneydbProvider
+    DonatemoneydbProvider,
+    ReqinvdbProvider
   ]
 })
 export class AppModule {}

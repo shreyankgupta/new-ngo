@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Request } from "../../shared/request";
+import { Reqinv } from "../../shared/reqinv";
 import { DonategoodsProvider } from "../../providers/donategoodsdb/donategoodsdb";
+import { ReqinvdbProvider } from "../../providers/reqinvdb/reqinvdb";
 
 /**
  * Generated class for the DonateGoodsPage page.
@@ -29,7 +31,7 @@ export class DonateGoodsPage {
   req_qty_unit:string;
   req_category:string;
   
-  constructor(public Req:DonategoodsProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public Req:DonategoodsProvider,public reqinv:ReqinvdbProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -47,6 +49,16 @@ export class DonateGoodsPage {
       }
     });
   }
+
+  onCatagory(){
+    this.reqinv.getCat().subscribe((resp)=>{
+      (data:any)=>{
+      alert("Success");
+      }
+    });
+ 
+  }
+
   }
 
 

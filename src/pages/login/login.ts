@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams, LoadingController, ToastController
 import { LogindbProvider } from "../../providers/logindb/logindb";
 import { Users } from "../../shared/users";
 import { HomePage } from "../../pages/home/home";
-import { IonicStorageModule } from "@ionic/storage";
+import { IonicStorageModule,Storage } from "@ionic/storage";
 /**
  * Generated class for the LoginPage page.
  *
@@ -32,11 +32,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  setSession()
-  {
-    console.log(this.pk_email_id);
-    this.storage.set('email',this.pk_email_id);
-  }
+ 
 //login
   onLogin() {
     let item = new Users(this.pk_email_id,'', '', '', this.password, '', '');
@@ -44,9 +40,7 @@ export class LoginPage {
       (data1:Users[]) => {
         if (data1.length==1) {
           this.storage.set('email',this.pk_email_id);
-          this.storage.get('email').then((val=>{
-            console.log(val)
-          }));
+         
           this.navCtrl.push(HomePage);
           
         }
