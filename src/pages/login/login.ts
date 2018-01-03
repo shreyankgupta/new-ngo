@@ -37,7 +37,7 @@ export class LoginPage {
     console.log(this.pk_email_id);
     this.storage.set('email',this.pk_email_id);
   }
-
+//login
   onLogin() {
     let item = new Users(this.pk_email_id,'', '', '', this.password, '', '');
     this.data.login(item).subscribe(
