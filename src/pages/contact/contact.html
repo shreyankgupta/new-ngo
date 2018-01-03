@@ -1,23 +1,32 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Donate
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
+<ion-card (click)='onGoods()'>
+  <img src="img/nin-live.png"/>
+  <ion-card-content>
+    <ion-card-title>
+     Goods And Stuffs
+      </ion-card-title>
+    <p>
+      This Contains Clothes,Grocery and Food.
+    </p>
+  </ion-card-content>
+</ion-card>
 
-    <button ion-button (click)="onClick()">Button</button>
-    <button ion-button (click)="onSignup()">Signup</button>
-    
-  </ion-list>
-
-  
+<ion-card (click)='onMoney()'>
+    <img src="img/nin-live.png"/>
+    <ion-card-content>
+      <ion-card-title>
+      Money
+        </ion-card-title>
+      <p>
+       You can donate Money here.
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
